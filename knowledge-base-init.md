@@ -7,7 +7,7 @@
 ---
 
 ## 阶段一：项目扫描与理解
-1. 阅读项目根目录下的所有配置文件（如 package.json, tsconfig.json, Cargo.toml, requirements.txt 等），识别技术栈、主要依赖、脚本命令，若不存在阅读 doc/ 下文档和 AGENTS.md 搞清楚该项目是干什么的。
+1. 阅读项目根目录下的所有配置文件（如 package.json, tsconfig.json, Cargo.toml, requirements.txt 等），识别技术栈、主要依赖、脚本命令，若不存在阅读 docs/ 下文档和 AGENTS.md 搞清楚该项目是干什么的。
 2. 阅读项目的目录结构，识别出核心模块、入口文件、测试目录、API 层、数据层、组件库等。
 3. 如果存在旧的 AGENTS.md，先阅读它，提取其中仍然有效的规则、约束和架构描述。
 4. 扫描关键源文件（如路由定义、数据模型、核心业务逻辑），概括出项目的领域模型和主要功能模块。
