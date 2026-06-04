@@ -572,6 +572,63 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 富有创意地诠释，并做出看似为特定情境量身打造的意外选择。在浅色与深色主题、不同字体和视觉风格之间进行灵活切换。然而，你仍可能在不同世代中倾向于采用相似的选择（例如Space Grotesk）。请避免这种情况：关键在于跳出常规思维！
 ```
 
+# OpenAI 
+## 前端设计 
+建议库：
+```text
+Styling / UI: Tailwind CSS, shadcn/ui, Radix Themes
+样式设计/用户界面：Tailwind CSS、shadcn/ui、Radix Themes
+Icons: Lucide, Material Symbols, Heroicons
+图标风格：清晰风格、材质风格、英雄图标风格
+Animation: Motion  动画：运动效果
+```
+在处理规模较大的代码库时的前端开发工作中，在提示语中加入这些类别的指令，能够取得最佳效果：
+```text
 
+原则：确立视觉质量标准，使用可模块化/重复使用的组件，保持设计的统一性。
+UI/UX 设计：需明确指定文字样式、颜色、间距/布局、各种交互状态下的表现形式（如鼠标悬停时、页面为空时、加载中的状态），以及产品的无障碍性设计。
+结构：确定文件/文件夹的布局，以便实现无缝集成。
+组件：请举例说明可重用的封装方式，以及后端调用与前端逻辑分离的策略。
+页面：提供各种常见布局的模板。
+代理指令：要求模型确认设计假设、构建项目框架、执行各项标准、实现 API 集成、测试系统状态并记录代码相关文档。
+```
 
+---
+
+## 复杂任务
+涉及 LLM 的复杂且耗时的实施过程中，应重点关注以下三个关键方面：
+- 首先，要充分规划各项任务，确保问题能够得到彻底解决；
+- 其次，在使用重要工具之前，需提前明确相关的操作步骤；
+- 最后，应使用任务管理工具来有条不紊地跟踪工作流程和进度。
+```text
+Remember, you are an agent - please keep going until the user's
+query is completely resolved, before ending your turn and yielding
+back to the user. Decompose the user's query into all required
+sub-requests, and confirm that each is completed. Do not stop
+after completing only part of the request. Only terminate your
+turn when you are sure that the problem is solved. You must be
+prepared to answer multiple queries and only finish the call once
+the user has confirmed they're done.
+
+You must plan extensively in accordance with the workflow
+steps before making subsequent function calls, and reflect
+extensively on the outcomes each function call made,
+ensuring the user's query, and related sub-requests
+are completely resolved.
+
+请记住，您是代理，务必继续处理，直到用户的问题完全解决为止，然后再结束您的回合，将控制权交还给用户。
+将用户的请求分解为所有必要的子请求，并确认每个子请求均已完成。
+不要在仅完成部分请求后就停止。只有在确定问题已解决时，才应结束您的回合。您必须准备好回答多个问题，并且只有在用户确认完成之后，才能结束本次通话。
+在进行后续函数调用之前，必须根据工作流程步骤进行充分规划，并对每次函数调用的结果进行深入反思，确保用户的查询及相关子请求得到完全解决。
+```
+
+---
+
+## Preambles for transparency   实现透明度的必要前提/实现透明度的基础条件
+要求模型解释为何要调用某个工具，但只需在关键的步骤中进行说明即可。
+```text
+Before you call a tool explain why you are calling it
+
+在调用工具之前，请先说明您为何要调用它。
+```
 
